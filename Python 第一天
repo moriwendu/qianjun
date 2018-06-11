@@ -1,3 +1,4 @@
+一、 条件判断语句
     if 条件：
         xxxx
     
@@ -22,3 +23,16 @@
     else:
         xxxx
         
+二、循环语句
+    while 条件：
+        xxxx
+        
+        num = 1
+        while num<=10:
+            num += 1
+            print(num)
+            
+        num = 1
+        while num<=10:
+            print(num)
+            num += 1
