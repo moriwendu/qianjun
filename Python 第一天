@@ -1,0 +1,24 @@
+    if 条件：
+        xxxx
+    
+    if 条件：
+        xxxx
+    else:
+        xxxx
+        
+    if 条件：
+        xxxx
+    elif 条件：
+        xxxx
+    elif 条件：
+        xxxx
+        
+    if 条件：
+        xxxx
+    elif 条件：
+        xxxx
+    elif 条件：
+        xxxx     
+    else:
+        xxxx
+        
