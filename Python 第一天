@@ -1,5 +1,6 @@
 一、 条件判断语句
-    if 条件：
+ 1. if   
+   if 条件：   
         xxxx
     
     if 条件：
@@ -22,6 +23,24 @@
         xxxx     
     else:
         xxxx
+  2. if 嵌套
+    if 条件：
+        xxxx
+        if 条件：
+            xxxx
+            
+    if 条件：
+        xxxx
+        if 条件：
+            xxxx
+    elif 条件：
+        xxxx
+        if 条件：
+            xxxx
+            
+            
+        
+        
         
 二、循环语句
     while 条件：
@@ -36,3 +55,14 @@
         while num<=10:
             print(num)
             num += 1
+            
+    i=1
+    # i 用来控制行数
+    while i<=5:
+        # j 用来控制每行的列数
+        j=1
+        while j<=5:
+            print("*",end="")
+            j += 1
+        print("")
+        i += 1
