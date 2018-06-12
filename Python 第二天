@@ -31,13 +31,16 @@
     name[::-1] 是 name[-1::-1]
     name[::1]  是 name[0::1]
     
-    Mystr = "hello world itcast and itcastxxxcpp"
+   
 
 字符串常见操作
+    
+    Mystr = "hello world itcast and itcastxxxcpp"
 
     Mystr.find("world") 
     Mystr.rfind("itcast")
-    Mystr.index("donge")
+    Mystr.index("donge")   反回报错
     Mystr.rindex("itcast")
-    Mystr.count("itcast")
-    Mystr.replace("world","WORLD")
+    Mystr.count("itcast")  反回 2       计算itcast有几个
+    
+    Mystr.replace("world","WORLD") 返回值为'hello WORLD itcast and itcastxxxcpp'  但原字符串不能被改变,因为 字符串、数字、元组是不可变类型
