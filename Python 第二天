@@ -32,9 +32,12 @@
     name[::1]  是 name[0::1]
     
     Mystr = "hello world itcast and itcastxxxcpp"
-    
-    Mystr.find("world")
+
+字符串常见操作
+
+    Mystr.find("world") 
     Mystr.rfind("itcast")
     Mystr.index("donge")
     Mystr.rindex("itcast")
     Mystr.count("itcast")
+    Mystr.replace("world","WORLD")
