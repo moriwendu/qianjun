@@ -1,1 +1,8 @@
 
+字符串中的下标
+
+    name = "abcdefg"
+    name[0] 是 a 
+    name[1] 是 b
+    ...
+    name[6] 是 g
