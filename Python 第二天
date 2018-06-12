@@ -37,4 +37,4 @@
     Mystr.rfind("itcast")
     Mystr.index("donge")
     Mystr.rindex("itcast")
-    Mystr.count("world")
+    Mystr.count("itcast")
