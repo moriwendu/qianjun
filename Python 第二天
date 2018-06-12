@@ -39,8 +39,28 @@
 
     Mystr.find("world") 
     Mystr.rfind("itcast")
-    Mystr.index("donge")   反回报错
-    Mystr.rindex("itcast")
-    Mystr.count("itcast")  反回 2       计算itcast有几个
+    Mystr.index("donge")                   反回报错
+    Mystr.rindex("itcast") 
+    Mystr.count("itcast")                  反回 2       计算itcast有几个
     
-    Mystr.replace("world","WORLD") 返回值为'hello WORLD itcast and itcastxxxcpp'  但原字符串不能被改变,因为 字符串、数字、元组是不可变类型
+    替换：
+    >>>Mystr.replace("world","WORLD")      原字符串不能被改变,因为 字符串、数字、元组是不可变类型
+    'hello WORLD itcast and itcastxxxcpp'
+    
+    >>> Mystr.replace("itcast","ITCAST",1) 
+    'hello world ITCAST and itcastxxxcpp'
+    
+    切割
+    >>> Mystr.split(" ")
+    ['hello', 'world', 'itcast', 'and', 'itcastxxxcpp']
+    
+    字符串首字母大写
+     >>>Mystr.capitalize()
+     'Hello world itcast and itcastxxxcpp'
+     
+    所有字符串首字母大写
+    >>> Mystr.title()
+    'Hello World Itcast And Itcastxxxcpp'
+
+    
+
