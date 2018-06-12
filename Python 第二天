@@ -62,5 +62,11 @@
     >>> Mystr.title()
     'Hello World Itcast And Itcastxxxcpp'
 
+列表
+    names = ["你","去","啊"]
+    
+    #C语言中的数组定义 int nums[]={11,22,33,44,55}  不能是其它字符串,元组啥的
+    
+    names = [11,22,3.14,"fdas"]  列表可以是任何类型的数据
     
 
