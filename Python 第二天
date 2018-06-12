@@ -25,5 +25,16 @@
         **步进如果是整数,就是从左至右进行下标的步进 例:name[2:8:2] **
         **步进如果是负数,就是从右至左进行下标的步进 例:name[2:8:-2] **
         
-    name[-1:0:-1] 是 "GFEDCBAgfedcb" 从最后一个下标至第一个下标步进为从右至左-1的数    
+    name[-1:0:-1] 是 "GFEDCBAgfedcb"   从最后一个下标至第一个下标步进为从右至左-1的数  
+    name[-1::-1]  是 "GFEDCBAgfedcba"  从最后一个下标至第一个下标步进为从右至左-1的数 
      
+    name[::-1] 是 name[-1::-1]
+    name[::1]  是 name[0::1]
+    
+    Mystr = "hello world itcast and itcastxxxcpp"
+    
+    Mystr.find("world")
+    Mystr.rfind("itcast")
+    Mystr.index("donge")
+    Mystr.rindex("itcast")
+    Mystr.count("world")
