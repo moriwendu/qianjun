@@ -13,3 +13,15 @@ def print_menu():
     print(" 2"xxx"）
     print("="*50)
 print_menu()         #调用函数直接输函数名    
+
+
+函数调用
+
+def sum_2_nums(a,b):
+    result = a+b
+    print("%d+%d=%d"%(a,b,result))
+    
+num1 = int(input("请输入相加的第一个值："))    
+num2 = int(input("请输入相加的第二个值："))    
+
+sum_2_nums(num1,num2)
