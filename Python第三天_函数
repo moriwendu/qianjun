@@ -66,3 +66,21 @@
             i+=1
 
     print_5_line()        
+    
+函数嵌套调用代码：
+    def Sum_3_nums(a,b,c):               #当定义函数调用时接收函数调用称为：形参
+        Sum = a+b+c
+       #print("%d+%d+%d=%d"%(a,b,c,Sum))
+        return Sum
+    def Average_3_nums(a1,b1,c1):
+        aver = Sum_3_nums(a1,b1,c1)
+        aver/=3
+        print("平均值是：%s"%aver)
+
+
+    num1 = int(input("请输入第一个数字:"))
+    num2 = int(input("请输入第二个数字:"))
+    num3 = int(input("请输入第三个数字:"))
+    Sum_3_nums(num1,num2,num3)
+    Average_3_nums(num1,num2,num3)        #当函数调用参数时传给函数使用时称为：实参
+
