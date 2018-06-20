@@ -28,15 +28,15 @@
     
 
 带有返回值的函数    
-    def Get_Temperature():
+def Get_Temperature():
         Temperature = 22
         print("当前温度是：%d"%Temperature)
         return Temperature                # 1. return 可以把Temperature 的变量值 返回给函值当返回值
-        
-    def Get_Chinese_Temperature(Chinese_Temperature): # 4. 把result 的值附加给Chinese_Temperature
-        Chinese_Temperature = Temperature + 3
+
+def Get_Chinese_Temperature(S_Temperature): # 4. 把result 的值附加给S_Tmperature
+        Chinese_Temperature = S_Temperature + 10
         print("当前的华氏温度是%d"%Chinese_Temperature)
-    Get_Temperature()
-    result = Get_Temperature()           # 2. 把result 的值定义为Get_Temperature这个函数执行后得到的值
-    Get_Chinese_Temperature(result)      # 3. 执行Get_Chinese_Temperature的函数时把result的值附加给函数使用
+result = Get_Temperature()                # 2. 把result 的值定义为Get_Temperature这个函数执行后得到的值
+Get_Chinese_Temperature(result)           # 3. 执行Get_Chinese_Temperature的函数时把result的值附加给函数使用
+
         
