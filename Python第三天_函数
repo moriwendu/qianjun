@@ -17,7 +17,7 @@ print_menu()         #调用函数直接输函数名
 
 函数调用
 
-def sum_2_nums(a,b):
+def sum_2_nums(a,b):    #把底下num1与num2的值附给函数sum_2_nums的a和b  num1 = a , num2 = b
     result = a+b
     print("%d+%d=%d"%(a,b,result))
     
