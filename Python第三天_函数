@@ -28,15 +28,29 @@
     
 
 带有返回值的函数    
-def Get_Temperature():
-        Temperature = 22
-        print("当前温度是：%d"%Temperature)
-        return Temperature                # 1. return 可以把Temperature 的变量值 返回给函值当返回值
+    def Get_Temperature():
+            Temperature = 22
+            print("当前温度是：%d"%Temperature)
+            return Temperature                # 1. return 可以把Temperature 的变量值 返回给函值当返回值
 
-def Get_Chinese_Temperature(S_Temperature): # 4. 把result 的值附加给S_Tmperature
-        Chinese_Temperature = S_Temperature + 10
-        print("当前的华氏温度是%d"%Chinese_Temperature)
-result = Get_Temperature()                # 2. 把result 的值定义为Get_Temperature这个函数执行后得到的值
-Get_Chinese_Temperature(result)           # 3. 执行Get_Chinese_Temperature的函数时把result的值附加给函数使用
+    def Get_Chinese_Temperature(S_Temperature): # 4. 把result 的值附加给S_Tmperature
+            Chinese_Temperature = S_Temperature + 10
+            print("当前的华氏温度是%d"%Chinese_Temperature)
+    result = Get_Temperature()                # 2. 把result 的值定义为Get_Temperature这个函数执行后得到的值
+    Get_Chinese_Temperature(result)           # 3. 执行Get_Chinese_Temperature的函数时把result的值附加给函数使用
+
+当一个脚本里需要多个return返回值的时候           ####---- 函数只要运行return 函数就直接退出 ----####
+    def test():
+        a = 11
+        b = 22
+        c = 33
+        
+        #第一种 --用一个列表或元组来封装3个变量
+        d = [a,b,c] 或 d = (a,b,c)
+        return d
+        #第二种 --直接用列表圈起来
+        return [a,b,c] 或 return (a,b,c)
+        #第三种 --直接return上去，
+        return a,b,c     #出来的效果是一个元组。
 
         
