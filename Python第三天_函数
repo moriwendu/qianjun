@@ -1,27 +1,42 @@
 
 把具有一个独立功能的代码块当做一个总体，把总体做成函数！
 
-def 名称():
-    缩进 操作代码
-    
-    #定义函数只是定义了，并没有使用 使用的话直接调用
-    
-def print_menu():
-    print("="*50)
-    print("    名片")
-    print(" 1"xxx")
-    print(" 2"xxx"）
-    print("="*50)
-print_menu()         #调用函数直接输函数名    
+    def 名称():
+        缩进 操作代码
+
+        #定义函数只是定义了，并没有使用 使用的话直接调用
+
+    def print_menu():
+        print("="*50)
+        print("    名片")
+        print(" 1"xxx")
+        print(" 2"xxx"）
+        print("="*50)
+    print_menu()         #调用函数直接输函数名    
 
 
 函数调用
 
-def sum_2_nums(a,b):    #把底下num1与num2的值附给函数sum_2_nums的a和b  num1 = a , num2 = b
-    result = a+b
-    print("%d+%d=%d"%(a,b,result))
-    
-num1 = int(input("请输入相加的第一个值："))    
-num2 = int(input("请输入相加的第二个值："))    
+    def sum_2_nums(a,b):    #把底下num1与num2的值附给函数sum_2_nums的a和b  num1 = a , num2 = b
+        result = a+b
+        print("%d+%d=%d"%(a,b,result))
 
-sum_2_nums(num1,num2)
+    num1 = int(input("请输入相加的第一个值："))    
+    num2 = int(input("请输入相加的第二个值："))    
+
+    sum_2_nums(num1,num2)
+    
+
+带有返回值的函数    
+    def Get_Temperature():
+        Temperature = 22
+        print("当前温度是：%d"%Temperature)
+        return Temperature                # 1. return 可以把Temperature 的变量值 返回给函值当返回值
+        
+    def Get_Chinese_Temperature(Chinese_Temperature): # 4. 把result 的值附加给Chinese_Temperature
+        Chinese_Temperature = Temperature + 3
+        print("当前的华氏温度是%d"%Chinese_Temperature)
+    Get_Temperature()
+    result = Get_Temperature()           # 2. 把result 的值定义为Get_Temperature这个函数执行后得到的值
+    Get_Chinese_Temperature(result)      # 3. 执行Get_Chinese_Temperature的函数时把result的值附加给函数使用
+        
