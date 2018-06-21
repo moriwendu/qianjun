@@ -1,0 +1,19 @@
+全局变量及局部变量：
+
+    #定义一个全局变量，webdu
+    wendu = 0
+    def get_wendu():
+        #定义一个局部变量
+        #wendu = 33
+
+        #如果想把函数内的局部变量定义为全局变量，得首先声明变量是全局变量，然后再进行修改
+        global wendu
+        wendu = 33
+
+    def print_wendu():
+        print("温度：%d"%wendu)
+
+    get_wendu()
+    print_wendu()
+    
+    
