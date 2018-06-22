@@ -42,3 +42,28 @@
         print(c)
         print(d)
     test(d=11,a=22,c=44)    #在实参里定义的叫命令参数，命令参数必须对应函数里的形参匹配，如果不匹配就会报错    
+
+函数中定义不定长参数
+    def sum_2_nums(a,b,*args,**kwargs): #*args 可以是其它任何自己命名的名称  一个* 表示是元组列出后面的不定长参数 两个**表示是以字典的形式进行形参的传递
+        print("-"*30)
+        print(a)
+        print(b)
+        print(args)
+
+        result = a+b
+        for num in args:
+            result+=num
+        print("result=%d"%result)
+
+    sum_2_nums(11,22,33,44,55,66,77)
+    sum_2_nums(11,22,33)
+    sum_2_nums(11,22)
+    #sum_2_nums(11)#错误,因为形参中定义了a,b必须要实参输送两个实参
+    sum_2_nums(11,22,33,44,55,name=laowang,age=18)
+    
+    def sum_nums(a,b,*args)         #后面的参数给定相加
+        result = a+b
+        for num in args:
+            result += num
+        print(result)  
+    sum_nums(11,22,33,44,55,66,77,88)    
