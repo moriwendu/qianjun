@@ -1,0 +1,25 @@
+Python 中 i += i   不等于  i = i+i
+    a = [100]
+    def test(num):
+        num+=num
+        #num=num+num
+        print(num)
+    test(a)
+    print(a)
+    #结果是
+    [100, 100]
+    [100, 100]
+    
+    a = [100]
+    def test(num):
+        #num+=num
+        num=num+num
+        print(num)
+    test(a)
+    print(a)
+    #结果是
+    [100, 100]
+    [100]
+
+    # 当num+=num 时 num的指针指向的是[100]这个列表，当执行中查看到是个列表可修改类型后会直接在指针所指的地方直接修改 所以a也被修改
+    # 当num=num+num时，num会重新开辟一个num所指针指向的内存空间进行存储相加，即num = [100,100] a也就不会被修改
