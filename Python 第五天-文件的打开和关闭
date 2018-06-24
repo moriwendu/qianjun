@@ -3,6 +3,8 @@
     f.close()                     #.close() 是关闭文件
     f.read()                      #.read()  是读文件  .read(2) 表示两个两个的读   每读完一次就会从读完的内容后面读。
     f.write()                     #.write() 是写入文件
+    f.readline()                  #.readline() 读一行，读出来是一行字符串
+    f.readlines()                 #.readlines()读所有行，读出来是个列表   
 
 例子：复制文件内容至新文件然后命名中加【复件】
     #1. 获取用户要复制的文件名
