@@ -5,6 +5,8 @@
     f.write()                     #.write() 是写入文件
     f.readline()                  #.readline() 读一行，读出来是一行字符串
     f.readlines()                 #.readlines()读所有行，读出来是个列表   
+  
+    ####切记,当文件很大的时候慎用使用.read() .readline()
 
 例子：复制文件内容至新文件然后命名中加【复件】
     #1. 获取用户要复制的文件名
