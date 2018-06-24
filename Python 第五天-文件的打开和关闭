@@ -1,0 +1,4 @@
+f = open('test.txt','w+')     #打开test.txt的文件，w是可写及文件不存在就创建
+f.close()                     #.close() 是关闭文件
+f.read()                      #.read()  是读文件  .read(2) 表示两个两个的读   每读完一次就会从读完的内容后面读。
+f.write()                     #.write() 是写入文件
