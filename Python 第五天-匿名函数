@@ -1,3 +1,10 @@
+Python 中的匿名函数
+    def test(a,b,func):
+        result = func(a,b)    #这里func就相当于函名函数 lambda 11,22:11+22
+        return result         #这里的返回值是33
+    num = test(11,22,lambda x,y:x+y)
+    print(num)
+
 Python 中列表进行排有效排序
     nums = [11,22,33,44,55,66,77,88]
     nums.sort()    #相同元素进行排序
