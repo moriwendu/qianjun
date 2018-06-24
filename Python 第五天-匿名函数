@@ -5,6 +5,22 @@ Python 中的匿名函数
     num = test(11,22,lambda x,y:x+y)
     print(num)
 
+Python 匿名函数应用
+    #coding=uft-8
+    
+    def test(a,b,func):
+        result = func(a,b)    
+        return result  
+    
+    #Python2 直接input    
+    #func_new = input("请输入一个匿名函数:")    #这里我输了lambda x,y:x+y 如果这里是用的Python2的话，直接这样写是没问题的，Python2直接把表达式附于    
+   
+    #Python3 需要重新转换一下
+    func_new = input("请输入一个匿名函数:")     #这里我输了lambda x,y:x+y 也就是func_new = "lambda x,y:x+y"  是一个字符串
+    func_new = eval(func_new)                 #转换之后func_new 就等于  lambda x,y:x+y  就一个表达式
+    num = test(11,22,func_new)        
+    print(num)                                 
+
 Python 中列表进行排有效排序
     nums = [11,22,33,44,55,66,77,88]
     nums.sort()    #相同元素进行排序
