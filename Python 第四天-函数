@@ -79,7 +79,14 @@
     B = {"name":"laoli","age":18}
     test(11,22,33,*A,**B)     #实参加*   一个代表传的为元组，两个代表传字典
         
-
+函数的递归
+    def xiangcheng(num):  #函数中的递归
+        if num>1:
+            return num + xiangcheng(num-1) #当num大于1的时候 执行的这条之后又会调用到xiangcheng(num-1)这个函数自身只是num-1了1继续执行
+        else:
+            return num
+    result = xiangcheng(int(input("请输入您要递归相乘的数:")))
+    print(result)
 
 
 
