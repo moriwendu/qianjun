@@ -1,4 +1,4 @@
-Python 中 i += i   不等于  i = i+i
+Python 中 i += i   不等于  i = i+i    即Python中所有的变量都是引用，指针指向内存空间
     a = [100]
     def test(num):
         num+=num
