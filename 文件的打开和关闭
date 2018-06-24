@@ -1,0 +1,3 @@
+f = open('test.txt','w')     #打开test.txt的文件，w是可写及文件不存在就创建
+
+f.close()     #.close() 是关闭文件
