@@ -5,5 +5,5 @@ Python 中列表进行排有效排序
     
 Python 中列表中的字典进行排序
     infors = [{"name":"laoli","age":15},{"name":"laowang","age":18},{"name":"laosun","age":20}]
-    infors.sort(key=lambda x:x["name"])    #这里x:x["name"] 的x表示是列表中的每个字典的key:value ，x["name"]表示的是字典中的nmae来排序，使用key的
-    print(infors)                          #排序方法
+    infors.sort(key=lambda x:x["name"])    #这里x:x["name"] 的x表示是列表中的每个字典的key:value ，x["name"]表示的是字典中的nmae来排序 
+    print(infors)                         
