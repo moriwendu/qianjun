@@ -68,3 +68,21 @@ del dog2#此时会调用__del__方法,因为没有变量指向它了
 print("====================")
 
 #如果在程序结束时,有些对象还存在,那么python解释器会自动调用它们的__del__方法来完成清理工作
+
+#__del__方法  ----2
+
+#引用计数的查看     引用计数sys.getrefcount()时会找个变量存储值，所以会在原始的计数上再加上1
+In [1]: import sys
+In [2]: class T:
+   ...:     pass
+   ...: 
+In [3]: t = T()
+In [4]: sys.getrefcount(t)
+Out[4]: 2
+In [5]: tt = t
+In [6]: sys.getrefcount(t)
+Out[6]: 3
+In [7]: del tt
+In [8]: sys.getrefcount(t)
+Out[8]: 2
+
