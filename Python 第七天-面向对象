@@ -1,10 +1,10 @@
-#保护对象的属性
-class Dog:
-    def set_age(self,new_age):
-        if new_age>0 and new_age<=100:
-            self.age = new_age
-        else:
-            self.age = 0
+#保护对象的属性    意思就是使用中使用判断来对比                    #这里直接给类添加属性，中间没有使用对象的属性判断，明显的age = -10是不合理的
+class Dog:                                                      class Dog:
+    def set_age(self,new_age):                                       pass
+        if new_age>0 and new_age<=100:                          dog = Dog()
+            self.age = new_age                                  dog.name = "小李"
+        else:                                                   dong.age = -10
+            self.age = 0                                        print(dog.name,dog.age)
 
     def get_age(self):
         return self.age
