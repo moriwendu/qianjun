@@ -57,7 +57,7 @@ dog.send_msg(1000)
 
 class Dog:
     
-    def __del__(self):  #当引用计算为0的时候，python解释器会自动调用__del__方法 此方法就是解决了一些善后的事儿
+    def __del__(self):  #当引用计数为0的时候，python解释器会自动调用__del__方法 此方法就是解决了一些善后的事儿
         print("-----英雄over------")
 
 dog1 = Dog()
