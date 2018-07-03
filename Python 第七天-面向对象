@@ -15,3 +15,39 @@ dog.set_age(-10)
 age = dog.get_age()
 print(age)
 #print(dog.age)
+
+
+
+
+#私有方法的----1
+class Dog:
+    #在前面加上__代表使用的是私有方法
+    def __test1(self):
+        print("----------1----------")
+    
+    def test2(self):
+        print("----------2----------")
+dog = Dog()
+dog.__test1()  #私有方法直接调用会报错，需要方法调用方法即下列实例2
+dog.test2()
+
+jony@jony:~$ python3 siyou.py 
+Traceback (most recent call last):
+  File "siyou.py", line 9, in <module>
+    dog.__test1()
+AttributeError: 'Dog' object has no attribute '__test1'
+
+#私有方法----2
+class Dog:    #定义一个类，假设我们的值满足条件时，我们调用私用方法
+
+    def __send_msg(self):  #__前面有两个下划线就说明是个私有的方法
+        print("------正在发送短信------")
+        
+    def send_msg(self, new_money):    #当我们满足条件时，让方法自行调用这个私有的方法，否则是打印不满足的条件
+        if new_money>100:
+            self.__send_msg()
+        else:
+            print("余额不足,请先充值 再发送短信")
+
+dog = Dog()
+dog.send_msg(1000)
