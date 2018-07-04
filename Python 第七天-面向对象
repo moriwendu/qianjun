@@ -137,10 +137,26 @@ class Xiaotq(Dog):
 
     def bark(self):    #我们再次在子类中定义，python解释器如果对象是Xiaotq这个对象的话，它默认是读子类的这个
         print("----狂叫-----")
+        
+        
+        #第1种 当我们想子类用了再使用父类的这个方法时，我们有两种方法 
+        #Dog.bark(self)
+
+        #第2种    super()是调用父类的一个函数
+        super().bark()
 
 
 xiaotq = Xiaotq()
 xiaotq.fly()
 xiaotq.bark()
 xiaotq.eat()
+
+#结果是：
+root@jony:/home/jony# python3 chongxie.py 
+----飞----
+----狂叫-----
+----汪汪叫---
+-----吃----
+
+
 
