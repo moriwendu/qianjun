@@ -114,3 +114,33 @@ xiaotq.fly()
 xiaotq.bark()
 xiaotq.eat()
 
+
+######## 重写  ----1
+class Animal:
+    def eat(self):
+        print("-----吃----")
+    def drink(self):
+        print("-----喝----")
+    def sleep(self):
+        print("-----睡觉----")
+    def run(self):
+        print("-----跑----")
+
+class Dog(Animal): 
+    def bark(self):   #当我们定义了一个方法bark时，父类已经定义
+        print("----汪汪叫---")
+
+
+class Xiaotq(Dog):  
+    def fly(self):
+        print("----飞----")
+
+    def bark(self):    #我们再次在子类中定义，python解释器如果对象是Xiaotq这个对象的话，它默认是读子类的这个
+        print("----狂叫-----")
+
+
+xiaotq = Xiaotq()
+xiaotq.fly()
+xiaotq.bark()
+xiaotq.eat()
+
