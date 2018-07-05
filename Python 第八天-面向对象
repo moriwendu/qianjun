@@ -1,5 +1,5 @@
 
-# 定义一个基本的4S店类  大至流程是我们定义一家车店，车店有个北京现代的车4s店，4s店里有两款车型，索纳塔和伊兰特。当我们输入车的型号的时候，车对应的知
+######### 定义一个基本的4S店类  大至流程是我们定义一家车店，车店有个北京现代的车4s店，4s店里有两款车型，索纳塔和伊兰特。当我们输入车的型号的时候，车对应的知
 # 道向哪个4s店去询求
 class CarStore(object):
 
@@ -87,4 +87,39 @@ jony@jony:~$ python3 danli.py
 139844259984776
 
 
+######## 只初始化1次，再次传送的参数将不再被初始化
+
+class Dog(object):
+
+    __instance = None
+    __init_flag = False    #我们在这定义一个类属性
+
+    def __new__(cls, name):
+        if cls.__instance == None:
+            cls.__instance = object.__new__(cls)
+            return cls.__instance
+        else:
+            #return 上一次创建的对象的引用
+            return cls.__instance
+
+    def __init__(self, name):
+        if Dog.__init_flag == False:  #当判断是 判断出flag这个类属性的值是False后，我们就定义self.name = name 当为True的时候什么动作都不做
+            self.name = name
+            Dog.__init_flag = True
+
+
+a = Dog("旺财")
+print(id(a))
+print(a.name)
+
+b = Dog("哮天犬")
+print(id(b))
+print(b.name)
+
+####代码运行的结果： 第二只附加的参数没有更改
+jony@jony:~$ python3 yici.py 
+140410368978448
+旺财
+140410368978448
+旺财
 
