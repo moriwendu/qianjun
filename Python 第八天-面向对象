@@ -1,1 +1,61 @@
 
+# 定义一个基本的4S店类  大至流程是我们定义一家车店，车店有个北京现代的车4s店，4s店里有两款车型，索纳塔和伊兰特。当我们输入车的型号的时候，车对应的知
+# 道向哪个4s店去询求
+class CarStore(object):
+
+    #仅仅是定义了有这个方法，并没有实现，具体功能，这个需要在子类中实现
+    def createCar(self, typeName):
+        pass
+
+    def order(self, typeName):
+        # 让工厂根据类型，生产一辆汽车
+        self.car = self.createCar(typeName)
+        self.car.move()
+        self.car.stop()
+        print("-"*50)
+
+# 定义一个北京现代4S店类
+class XiandaiCarStore(CarStore):
+
+    def createCar(self, typeName):
+        self.carFactory = CarFactory()
+        return self.carFactory.createCar(typeName)
+
+
+# 定义伊兰特车类
+class YilanteCar(object):
+
+    # 定义车的方法
+    def move(self):
+        print("---车在移动---")
+
+    def stop(self):
+        print("---停车---")
+
+# 定义索纳塔车类
+class SuonataCar(object):
+
+    # 定义车的方法
+    def move(self):
+        print("---索纳塔开这好爽---")
+
+    def stop(self):
+        print("---索纳塔停车不爽---")
+
+# 定义一个生产汽车的工厂，让其根据具体得订单生产车
+class CarFactory(object):
+
+    def createCar(self,typeName):
+        self.typeName = typeName
+        if self.typeName == "伊兰特":
+            self.car = YilanteCar()
+        elif self.typeName == "索纳塔":
+            self.car = SuonataCar()
+
+        return self.car
+
+suonata = XiandaiCarStore()
+suonata.order("索纳塔")
+yilante = XiandaiCarStore()
+yilante.order("伊兰特")
+
