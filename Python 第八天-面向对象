@@ -59,3 +59,32 @@ suonata.order("索纳塔")
 yilante = XiandaiCarStore()
 yilante.order("伊兰特")
 
+
+
+########创建一个单例
+
+class Dog(object):
+
+    __instance = None  #这里我们定义一个类属性的值为None  即空
+
+    def __new__(cls):
+        if cls.__instance == None:    #当我们的判定类属性的值如果是空时即把类属性定义为 object.__new__(cls)这个对象的引用 当条件不满足时，直接返
+                                      #回上一次我们定义cls.__instance的变量引用
+            cls.__instance = object.__new__(cls) 
+            return cls.__instance
+        else:
+            #return 上一次创建的对象的引用
+            return cls.__instance
+
+a = Dog()
+print(id(a))  #打印a的id号
+b = Dog()
+print(id(b))  #打印b的id号
+
+####代码运行后的结果    a与b的id号相同，即表明创建了一个单例对象
+jony@jony:~$ python3 danli.py 
+139844259984776
+139844259984776
+
+
+
