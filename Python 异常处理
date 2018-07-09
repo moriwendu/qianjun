@@ -33,3 +33,23 @@ jony@jony:~$ python3 yichang2.py
                     ^
 SyntaxError: invalid syntax
 
+
+######## 程序异常 ----2
+import time
+try:
+    f = open("test.txt")
+    try:
+        while True:
+	    content = f.readline()
+	    if len(content) == 0:
+	        break
+	    time.sleep(2)
+	    print(content)
+    except:
+        #如果在读取文件的过程中产生了异界，就会捕获到，例如按下Ctrl+c
+	pass
+    finally:
+        f.close()
+	print("关闭文件")
+except Exception:
+    print("没有这个文件")
