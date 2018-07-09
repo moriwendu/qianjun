@@ -1,1 +1,35 @@
 
+########--程序异常 ----1
+
+try:    #捕获异常的起首
+    open("xxx.txt")
+	print("---------1-----------")
+
+except NameError,FileNotFoundError:   #捕获异常的哪些类型的异常
+    print("有异常")
+except Exception as ret： #加上as ret 把异常的类型传输进ret这个变量里
+    print("如果用了Exception,那么就是前面没有匹配到的异常全部归类到这里进行这里的执行代码")
+    print(ret)
+else: #没有异常才会执行的下面一串代码
+    print("没有异常执行的")
+finally:
+    print("最后执行的代码，无论是有异常还是没有异常都会执行")
+    
+print("继续")	
+
+#当上面这些代码执行的时候，python2和python3所得出的结果不同
+
+#Python2 会报IOError的错误
+jony@jony:~$ python yichang2.py 
+Traceback (most recent call last):
+  File "yichang2.py", line 4, in <module>
+    open("xxx.txt")
+IOError: [Errno 2] No such file or directory: 'xxx.txt'
+
+#Python3会取SyntaxError错误
+jony@jony:~$ python3 yichang2.py 
+  File "yichang2.py", line 7
+    except NameError,FileNotFoundError:
+                    ^
+SyntaxError: invalid syntax
+
