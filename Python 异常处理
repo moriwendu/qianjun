@@ -53,3 +53,52 @@ try:
 	print("关闭文件")
 except Exception:
     print("没有这个文件")
+    
+    
+    
+######## 程序异常的传递：----1
+
+def test1():
+    print("----1----")
+	print(num)
+	print("----1----")
+	
+def test2():
+    print("----2----")
+	test1()
+	print("----2----")	
+
+def test3():
+    try:
+		print("----3----")
+		test1()
+		print("----3----")	
+    except Exception as result:
+	    print("捕获到了异常，信息是:%s"%result)
+	
+    print("----3.2----")
+
+test3()
+print("------华丽的分割线------")
+test2()	
+
+#### 得到的结果是：
+ony@jony:~$ python3 chuandi.py      。
+----3----
+----1----
+捕获到了异常，信息是:name 'num' is not defined    #当我们用Python3执行这个代码的时候，test3里有定义try： 所以有捕捉到错误的信息
+----3.2----
+------华丽的分割线------
+----2----
+----1----
+Traceback (most recent call last):              #当代码执行test2()的时候当调用test1()的时候程序就崩了，因为print(num)没有这个值，所以就直接报错
+  File "chuandi.py", line 23, in <module>
+    test2() 
+  File "chuandi.py", line 8, in test2
+    test1()
+  File "chuandi.py", line 3, in test1
+    print(num)
+NameError: name 'num' is not defined
+jony@jony:~$ 
+
+
