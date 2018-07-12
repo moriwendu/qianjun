@@ -42,7 +42,8 @@ del
 
 ########  __name__  变量
      
-      当__name__ 被模块调用的时候它的值根据那个模块调用的名称而变动，如果是本身的程序调用就是__main__ 这个字符串
+      #当__name__这个变量被定义时他的变量根据模块的名称来变化，如叫send.py 那__name__就是 send  如果是send.py自身调用__name__  那
+      #__name__的值就是__main__这个字符串
       
  #### 参考代码： 
  
@@ -54,6 +55,9 @@ del
 
 def test2():
     print("-----------test2------------")
+
+def test3():
+    print(__name__)
 
 if __name__ == "__main__":
     test1()
@@ -71,12 +75,14 @@ import send
 import recv
 send.test1()
 send.test2()
+send.test3()
 recv.test1()
 
 #得到的结果是：
 jony@jony:~$ python3 main.py 
 -----------test1------------
 -----------test2------------
+send
 --------recv-----
 
 
