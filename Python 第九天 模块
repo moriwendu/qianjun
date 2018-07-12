@@ -10,5 +10,5 @@
    from os import __file__
    __file__()
    
-   #----3----                       # from os import * 不建意常用
+   #----3----                       
    from os import *
