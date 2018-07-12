@@ -1,0 +1,14 @@
+   # 查看Python当中有哪些模块，在os.__file__里查看
+   import os
+   os.__file__
+   
+   #导入模块的方法有：
+   #----1----
+   import     os
+   
+   #----2----
+   from os import __file__
+   __file__()
+   
+   #----3----                       # from os import * 不建意常用
+   from os import *
