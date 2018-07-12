@@ -56,7 +56,7 @@ except Exception:
     
     
     
-######## 程序异常的传递：----1
+######## 程序异常 ----3
 
 def test1():
     print("----1----")
@@ -102,3 +102,25 @@ NameError: name 'num' is not defined
 jony@jony:~$ 
 
 
+######## 程序异常 ----4
+
+class Test(object):
+    def __init__(self,switch):
+        self.switch = switch
+    def calc(self,a,b):
+        try:
+	    return a/b
+	except Exception as result:
+	    if self.switch:
+	        print("捕获开启，异常信息如下")
+		print(result)
+	    else:
+	        raise #重新抛出这个异常，此时就不会被这个异常处理给捕获到，从而触发默认的异常处理
+		
+a = Test(True)
+a.calc(11,0)
+
+print("------------------------------------------------------------------------")
+
+a.switch = False
+a.calc(11,0)
