@@ -92,15 +92,53 @@ send
 ######## __all__ 
 
 #如果导入这个模块的方式是 from 模块名 import * ,那么仅仅会导入__all__的列表中包含的名字 (可以有变量，可以有类，可以有函数...)
-__all__ = ["test1","Test"]
-
-def test1():
-    print("----test-1-----")
-
-def test2():
-    print("----test-2-----")
+__all__ = ["test1","num","Test"]
 
 num = 100
+num2 = 200
+
+def test1():
+    print("----1----")
+
+def test2():
+    print("----2----")
 
 class Test(object):
     pass
+
+class Test1(Test):
+    pass
+
+In [5]: from test import *
+
+In [6]: num         # 当我们定义的时候，num有值出现
+Out[6]: 100
+
+In [7]: num2        #num2 我们没有加到__all__这个变量的列表里，所以就报错了
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-7-8251c97e9ea1> in <module>()
+----> 1 num2
+
+NameError: name 'num2' is not defined
+
+In [8]: test1()
+----1----
+
+In [9]: test2()
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-9-7b315abe3193> in <module>()
+----> 1 test2()
+
+NameError: name 'test2' is not defined
+
+In [10]: t = Test()
+
+In [11]: t1 = Test1()
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-11-2b297ec57aeb> in <module>()
+----> 1 t1 = Test1()
+
+NameError: name 'Test1' is not defined
