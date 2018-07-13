@@ -1,0 +1,22 @@
+########Python 里的包概念。
+
+
+root@jony-virtual-machine:~# tree
+.
+├── infordisplay.py
+└── TestMsg
+    ├── __init__.py        #如果一个文档里有__init__.py 这个文件就证明这是Python的包文件
+    ├── __pycache__
+    │   ├── __init__.cpython-36.pyc
+    │   └── sendmsg.cpython-36.pyc
+    ├── recvmsg.py
+    └── sendmsg.py
+
+
+root@jony-virtual-machine:~# cat TestMsg/__init__.py
+
+__all__ = ["sendmsg"]  #在__all__里添加模块的名称后在Python中调用时适用于 from TestMsg import * 这种方法
+
+#import sendmsg        #注：这种方法只能适用于Python2  Python3的话适用不了
+
+from . import sendmsg #注：这种方法适用于Python2、Python3 通用的！ 适用于import TestMsg 这种方法
