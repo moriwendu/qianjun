@@ -90,3 +90,17 @@ python setup.py sdist
     ├── cc.py
     ├── dd.py
     └── __init__.py
+
+
+
+################################################总结#########################################################
+  #  python3 setup.py build      构建模块
+  #  python3 setup.py instll     安装模块
+  #  python3 setup.py sdist      封装模块
+
+
+
+
+
+
+
