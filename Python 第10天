@@ -1,0 +1,5 @@
+######## 给对象传参数
+
+import sys
+
+print(sys.argv)  # sys.argv 传递的参数会带上参数本身的名称，传递的参数是一个列表。 所以sys.argv[*] *里是下标
